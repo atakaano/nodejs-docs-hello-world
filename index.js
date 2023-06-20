@@ -56,6 +56,13 @@ const router = express.Router();
 // Hello World for index page
 app.get('/', function (req, res) {
     return res.send("Hello World!");
+    var image = document.createElement('img');
+
+    // Resim dosyasýnýn yolunu belirtin
+    image.src = '/img/flo-logo.png';
+
+    // Resmi web sayfasýna ekleyin
+    document.body.appendChild(image);
 })
 
 app.get('/api', function (req, res) {
